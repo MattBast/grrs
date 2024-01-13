@@ -40,7 +40,8 @@ fn path_pointing_at_non_existant_file_returns_error() -> Result<()> {
 	// make sure the function returns a stderr
 	cmd.assert()
 		.failure()
-		.stderr(predicate::str::contains("Could not open the file `./hey.txt`"));
+		.code(66);
+		// .stderr(predicate::str::contains("Could not open the file `./hey.txt`"));
 
 	Ok(())
 
@@ -62,7 +63,8 @@ fn empty_string_pattern_returns_error() -> Result<()> {
 	// make sure the function returns a stderr
 	cmd.assert()
 		.failure()
-		.stderr(predicate::str::contains("The pattern provided is an empty string."));
+		.code(65);
+		// .stderr(predicate::str::contains("The pattern provided is an empty string."));
 
 	Ok(())
 
