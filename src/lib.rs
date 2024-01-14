@@ -1,6 +1,7 @@
 use anyhow::{Context, Result};
 use std::io::{BufRead};
 
+pub mod args;
 pub mod init;
 
 /// Search a files contents for the desired `pattern`.

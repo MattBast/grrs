@@ -6,7 +6,7 @@ use std::process::exit;
 
 fn main() -> Result<()> {
     // Get the args from the command line.
-    let args = grrs::init::Cli::parse();
+    let args = grrs::args::Cli::parse();
 
     // Read user inputs and make sure they're valid. Return
     // a reader that can read the provided file.
