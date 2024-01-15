@@ -13,6 +13,6 @@ fn main() -> Result<()> {
     let reader = grrs::init::init(&args)?;
 
     // Search the file contents for the desired `pattern`.
-    grrs::search_file(reader, &args.pattern, &mut stdout())?;
+    grrs::run::search_file(reader, &args.pattern, &mut stdout())?;
     exit(exitcode::OK);
 }
