@@ -22,3 +22,9 @@ proptest = "1.0.0"
 clap = { version = "4.0", features = ["derive"] }
 clap-verbosity-flag = "2.1.1"
 clap_mangen = "0.2.17"
+
+[profile.test.package.proptest]
+opt-level = 3
+
+[profile.test.package.rand_chacha]
+opt-level = 3
